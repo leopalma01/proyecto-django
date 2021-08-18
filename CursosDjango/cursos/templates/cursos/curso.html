@@ -1,0 +1,31 @@
+{% extends "Contenido/encabezado.html" %}
+
+{%block titulo%} Curso {%endblock%}
+
+
+
+{%block contenido%}
+<section id="contact" class="four">
+  <div class="container">
+
+    <header>
+      <h2>Contactanos o solicita información sobre algun curso</h2>
+    </header>
+    <form method="post" action="{% url 'RegistrarCurso'%}" role="form">
+      {%csrf_token%}
+   
+      <div class="row">
+        <div class=" uno col-6 col-12-mobile"><p>Carrera:<input type="text" name="carrera" placeholder="Carrera" /></div></p>
+        <div class="dos col-6 col-12-mobile"><p>Turno:<input type="text" name="turno" placeholder="Turno" /></div></p>
+        <div class="dos col-6 col-12-mobile"><p>Curso:<input type="text" name="mate" placeholder="Curso" /></div></p>
+      <div class=" uno col-6 col-12-mobile"><p>Instructor:<input type="text" name="instructor" placeholder="Instructor" /></div></p>
+        <div class="boton col-12">
+          <input type="submit" value="Enviar" />
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</div>
+  {%endblock%}

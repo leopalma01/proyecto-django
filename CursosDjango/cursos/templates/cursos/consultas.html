@@ -1,0 +1,41 @@
+{% extends "Contenido/encabezado.html"%}
+
+{%block titulo%} HOME {%endblock%}
+
+{%block contenido%}
+<h1 class="saludo">Hola Bienvenido a</h1>
+<h3 class="saludo2">PsPrograming tu plataforma de cursos </h3>
+
+<div class="registros col-6 col-12-mobile">
+<!-- Tabla de cursos -->
+<table class="table3 table-bordered table-
+striped">
+<thead>
+<tr>
+<th>Foto</th>
+<th>Curso</th>
+<th>Duracion</th>
+<th>Carrera</th>
+<th>Turno</th>
+<th>Instructor</th>
+</tr>
+</thead>
+
+<tbody>
+    {% for curso in cursos %}
+    <tr>
+    <td class="text-center">
+    <img src="{{curso.imagen.url}}" alt="" class="img-media">
+    </td>
+    <td class="text-semibold">{{curso.curso}}</td>
+    <td class="muted">{{curso.duracion}}</td>
+    <td class="muted">{{curso.carrera}}</td>
+    <td class="muted">{{curso.horario}}</td>
+    <td class="muted">{{curso.nombre}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</div>
+    <!-- /Tabla de cursos -->
+{%endblock%}
