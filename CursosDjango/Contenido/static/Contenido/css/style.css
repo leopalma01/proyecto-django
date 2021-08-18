@@ -1,0 +1,73 @@
+/* Estilos de clases de paginas para evitar desbordamiento   */ 
+
+/* Estilos del encabezdo   */ 
+.top{
+    text-align: center;
+    }
+     .elementos{
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        /* centrado vertical */
+        position: absolute;
+        top: 100px;
+       margin-left: 15px;
+       padding-left: 15px;
+     }
+    
+    
+    /* centrado de elementos de los archivos principal, curso, contacto   */ 
+    .saludo{
+        justify-content: center;
+        text-align: center;
+        margin-right: 5px;
+        margin-top: 10px;
+        font-style: italic;
+        font-size: 1cm;
+    }
+    
+    .saludo2{
+        justify-content: center;
+        text-align: center;
+        margin-right: 5px;
+        margin-top: 5px;
+        font-style: italic;
+        
+    }
+    
+    .elemento{
+        justify-content: center;
+        text-align: center;
+    }
+    
+     .container{
+        justify-content: center;
+        text-align: center;
+        margin-right: 50px;
+     }
+    
+     .boton{
+    margin-bottom: 30px;
+     }
+    
+     
+.table{
+        margin: auto;
+        width: 50%;
+        margin-right: 100px; 
+         
+    }
+
+.table2{
+        margin: auto;
+        width: 50%;
+        margin-right: 300px; 
+         
+    }
+
+.table3{
+        margin: auto;
+        width: 50%;
+        margin-right: 300px; 
+         
+    }

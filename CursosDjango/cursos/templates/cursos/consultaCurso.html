@@ -1,0 +1,42 @@
+{% extends "Contenido/encabezado.html" %}
+{%block titulo%} CURSOS {%endblock%}
+
+{%block contenido%}
+<h1 class="saludo">Hola Bienvenido a</h1>
+<h3 class="saludo2">PsPrograming tu plataforma de cursos </h3>
+
+<div class="registros col-6 col-12-mobile">
+<!-- Tabla de cursos -->
+{% block tabla %}
+<table  class="table2 table-bordered table-
+striped">
+<thead>
+<tr>
+
+<th>Curso</th>
+<th>Carrera</th>
+<th>Turno</th>
+<th>Instructor</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+    {% for comentario in comentarios %}
+    <tr>
+    
+    <td class="text-semibold">{{comentario.mate}}</td>
+    <td class="muted">{{comentario.carrera}}</td>
+    <td class="muted">{{comentario.turno}}</td>
+    <td class="muted">{{comentario.instructor}}</td>
+    <td class="text-center"><a href="{%url 'Curso' comentario.id%}">Editar</a> </td>
+    <td class="text-center"><a href="{%url 'EliminarCurso' comentario.id%}">Eliminar</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</div>
+{% endblock tabla %}
+    <!-- /Tabla de cursos -->
+{%endblock%}

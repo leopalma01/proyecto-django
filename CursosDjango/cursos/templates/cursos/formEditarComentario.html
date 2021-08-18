@@ -1,0 +1,43 @@
+{% extends "Contenido/encabezado.html" %}
+
+{%block titulo%} EDITANDO {%endblock%}
+
+
+
+{%block contenido%}
+<section id="contact" class="four">
+  <div class="container">
+
+    <header>
+      <h2>Contactanos o solicita información sobre algun curso</h2>
+    </header>
+    <form method="post" action="{% url 'Editar' comentario.id%}" role="form">
+      {%csrf_token%}
+   
+      <div class="row">
+        <div class=" uno col-6 col-12-mobile"><p>Nombre:<input value={{comentario.usuario}}  type="text" name="usuario" placeholder="Nombre" /></div></p>
+        <div class="dos col-6 col-12-mobile"><p>Correo Elecronico<input value={{comentario.correo}}  type="text" name="correo" placeholder="Email" /></div></p>
+        <div class="tres col-6 col-12-mobile"><p>Cursos disponibles : 
+          <select name="cursos">
+          <option>Programacion</option>
+          <option>Bases de Datos</option>
+          <option>Diseño Digital</option>
+          <option>Movil</option>
+          <option>Telecomunicaciones</option>
+          <option>Redes</option>
+          <option>Ensamble de Hardware</option>
+          </select>
+      </p></div>
+        <div class="mensaje col-12">
+          <textarea name="mensaje" placeholder="Mensaje:">{{comentario.mensaje}}</textarea>
+        </div>
+        <div class="boton col-12">
+          <input type="submit" value="Enviar" />
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</div>
+  {%endblock%}

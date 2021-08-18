@@ -1,0 +1,44 @@
+{% extends "Contenido/encabezado.html" %}
+
+{%block titulo%} COMENTARIOS CONTACTO {%endblock%}
+
+
+
+
+
+{%block contenido%}
+
+<h3 class="saludo2">COMENTARIOS
+    <small>Lista de Comentarios</small></h3>
+
+
+
+<div class="tabla">
+<!-- Tabla de Alumnos -->
+{%block tabla%}
+<table class="table3 table-bordered table-striped ">
+<thead>
+<tr>
+<th>Usuario</th>
+<th>Correo</th>
+<th>Mensaje</th>
+<th></th>
+<th></th>
+</tr>
+</thead> 
+<tbody>
+{% for comentario in comentarios %}
+<tr>
+<td class="text-semibold">{{comentario.usuario}}</td>
+<td class="muted">{{comentario.correo}}</td>
+<td class="muted">{{comentario.mensaje}}</td>
+<td class="text-center"><a href="{%url 'ConsultaIndividual' comentario.id%}">Editar</a></td>
+<td class="text-center"><a href="{%url 'Eliminar' comentario.id%}">Eliminar</a></td>
+</tr>
+{% endfor %} 
+</tbody>
+</table>
+</div>
+{%endblock tabla%} 
+<!-- /Tabla de alumnos -->
+{%endblock%} 
