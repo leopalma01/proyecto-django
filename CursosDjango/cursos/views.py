@@ -159,10 +159,3 @@ def archivos(request):
         else:
                 return render(request,"cursos/archivos.html",{'archivo':Archivos})
 
-def consultasSQL(request):
-        cursos=Cursos.objects.raw('SELECT id,
-        curso, duracion, carrera, horario, nombre, imagen FROM 
-        cursos_cursos WHERE carrera="TIC" ORDER BY 
-        horario DESC')
-        return render(request,"cursos/consultas.html",
-        {'cursos':cursos})
