@@ -44,8 +44,6 @@ urlpatterns = [
     path('eliminarCurso/<int:id>/',views_cursos.eliminarCurso, name='EliminarCurso'),
      path('editarCurso/<int:id>/',views_cursos.consultarComentarioIndividualCurso, name='Curso'),
     path('comentarioCurso/<int:id>/',views_cursos.editarComentarioCurso, name="EditarCurso"),
-    path('subir',views_cursos.archivos,name="Subir"),
-    path('consultasSQL',views_cursos.consultasSQL,name="sql"),
 
 ]
 
